@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "user_management": {
+      "type": "rust",
+      "package": "user_management"
+    },
+    "post_management": {
+      "type": "rust",
+      "package": "post_management"
+    },
+    "social_graph": {
+      "type": "rust",
+      "package": "social_graph"
+    },
+    "frontend": {
+      "type": "assets",
+      "source": ["dist/"]
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
