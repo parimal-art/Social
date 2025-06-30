@@ -1,16 +1,23 @@
 {
+  "dfx": "0.25.0",
   "canisters": {
     "user_management": {
       "type": "rust",
-      "package": "user_management"
+      "package": "user_management",
+      "main": "src/user_management/src/lib.rs",
+      "candid": "src/user_management/user_management.did"
     },
     "post_management": {
       "type": "rust",
-      "package": "post_management"
+      "package": "post_management",
+      "main": "src/post_management/src/lib.rs",
+      "candid": "src/post_management/post_management.did"
     },
     "social_graph": {
       "type": "rust",
-      "package": "social_graph"
+      "package": "social_graph",
+      "main": "src/social_graph/src/lib.rs",
+      "candid": "src/social_graph/social_graph.did"
     },
     "frontend": {
       "type": "assets",
@@ -19,10 +26,16 @@
   },
   "defaults": {
     "build": {
-      "args": "",
+      "args": "--no-lock",   
       "packtool": ""
     }
   },
   "output_env_file": ".env",
-  "version": 1
+  "version": 1,
+  "networks": {
+    "local": {
+      "type": "ephemeral",
+      "bind": "127.0.0.1:8000"
+    }
+  }
 }

@@ -1,0 +1,4 @@
+service : {
+  follow_user : (principal) -> ();
+  get_following : (principal) -> (vec principal);
+};

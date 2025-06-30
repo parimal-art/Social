@@ -1,0 +1,4 @@
+service : {
+  create_post : (text) -> ();
+  get_all_posts : () -> (vec text);
+};
